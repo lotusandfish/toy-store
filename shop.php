@@ -173,14 +173,19 @@
                </div>
                <div class="left-ads-display col-lg-9">
                   <div class="row">
+                  	<?php 
+                  		$sql = "SELECT * FROM product";
+                  		$query = pg_query($conn,$sql);
+                  		while ($row = pg_fetch_array($query)){
+                  	 ?>
                      <div class="col-lg-4 col-md-6 col-sm-6 product-men women_two">
                         <div class="product-toys-info">
                            <div class="men-pro-item">
                               <div class="men-thumb-item">
-                                 <img src="images/a1.jpg" class="img-thumbnail img-fluid" alt="">
+                                 <img src="images/<?php echo $row['image']; ?>" class="img-thumbnail img-fluid" alt="">
                                  <div class="men-cart-pro">
                                     <div class="inner-men-cart-pro">
-                                       <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                       <a href="single.php?id=<?php echo $row['product_id']; ?>" class="link-product-add-cart">Quick View</a>
                                     </div>
                                  </div>
                                  <span class="product-new-top">New</span>
@@ -190,10 +195,10 @@
                                     <div class="grid_meta">
                                        <div class="product_price">
                                           <h4>
-                                             <a href="single.html">toys(barbie)</a>
+                                             <a href="single.php?id=<?php echo $row['product_id']; ?>">toys(barbie)</a>
                                           </h4>
                                           <div class="grid-price mt-2">
-                                             <span class="money ">$575.00</span>
+                                             <span class="money "><?php echo $row['price']; ?></span>
                                           </div>
                                        </div>
                                        <ul class="stars">
@@ -241,6 +246,9 @@
                            </div>
                         </div>
                      </div>
+                     <?php 
+                     	}
+                      ?>
       </section>
       <!-- //show Now-->
       <!--subscribe-address-->
