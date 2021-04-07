@@ -111,7 +111,7 @@
                         <a href="service.html" class="nav-link">Service</a>
                      </li>
                      <li class="nav-item">
-                        <a href="shop.html" class="nav-link">Shop Now</a>
+                        <a href="shop.php" class="nav-link">Shop Now</a>
                      </li>
                      <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
