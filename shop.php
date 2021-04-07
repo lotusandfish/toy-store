@@ -195,7 +195,7 @@
                                     <div class="grid_meta">
                                        <div class="product_price">
                                           <h4>
-                                             <a href="single.php?id=<?php echo $row['product_id']; ?>">toys(barbie)</a>
+                                             <a href="single.php?id=<?php echo $row['product_id']; ?>"><?php echo $row['product_name']; ?></a>
                                           </h4>
                                           <div class="grid-price mt-2">
                                              <span class="money "><?php echo $row['price']; ?></span>
